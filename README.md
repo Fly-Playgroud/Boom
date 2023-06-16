@@ -28,7 +28,7 @@
 
 ## 🚀 快速使用
 
-**在使用之前，请务必阅读并同意 [License](https://github.com/chaitin/xray/blob/master/LICENSE.md) 文件中的条款，否则请勿安装使用本工具。**
+**在使用之前，请务必阅读并同意 [License](https://github.com/Fly-Playgroud/Boom/blob/master/LICENSE.md) 文件中的条款，否则请勿安装使用本工具。**
 
 1. 单个URL爆破：
 
