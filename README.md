@@ -60,35 +60,35 @@
 # Version: 0.1
 
 max_boom_concurrent: 2                                                  # 最大同时爆破的目标个数
-boom_target_path: "" 													# 爆破目标字典路径
-browser_config:															# 浏览器配置
-    browser_model: local												# 浏览器模式
-    chrome_bin_path: ""													# 浏览器可执行文件所在路径
-    chrome_temp_dir: ./chrome_temp										# 浏览器临时文件存储目录
-    disable_headless: false												# 禁用无头模式
-    disable_images: true												# 禁用图片
-    leak_less: true														# 实验性参数：防止内存泄露
-    no_sandbox: true									                # 是否使用沙盒：Linux 以 root 用户运行的情况下设置为 true 
-    proxy: ""															# 浏览器代理
-    running_chrome:														# 正在运行的浏览器：如果启用， Boom 将会接管正在使用的浏览器
+boom_target_path: "" 							# 爆破目标字典路径
+browser_config:								# 浏览器配置
+    browser_model: local					        # 浏览器模式
+    chrome_bin_path: ""							# 浏览器可执行文件所在路径
+    chrome_temp_dir: ./chrome_temp					# 浏览器临时文件存储目录
+    disable_headless: false						# 禁用无头模式
+    disable_images: true						# 禁用图片
+    leak_less: true							# 实验性参数：防止内存泄露
+    no_sandbox: true						        # 是否使用沙盒：Linux 以 root 用户运行的情况下设置为 true 
+    proxy: ""							        # 浏览器代理
+    running_chrome:							# 正在运行的浏览器：如果启用， Boom 将会接管正在使用的浏览器
         enable: false
         ip: ""
         port: 0
-    user_agent: ""														# 浏览器 UA
-logger_config:															# 日志配置
-    logger_level: "info"												# 默认日志等级	
-    logger_time_format: 2006/01/02 15:04:05								# 日志输出时间格式
-    logger_file_name: ./log/boom.log									# 日志文件存储路径
-    logger_output_level: []												# 输出到文件中的日志等级
-    logger_file_max_size: 50											# 日志文件最大体积：单位 MB
-    logger_file_max_backups: 5											# 日志文件最大备份个数：单位 个
-    logger_file_max_age: 30												# 日志文件最大存储时长：单位 天
-    logger_prefix: ""													# 日志前缀
-global_boom_config:														# 全局爆破配置
-    boomConCurrent: 2													# 单个爆破目标的爆破并发数
-    boomModel: 2														# 爆破模式：1.用户名优先--用户名跑字典，密码固定；2.密码优先--密码跑字典，用户名固定
-    boomTarget: ""														# 爆破的目标
-    userNamePath: ""													# 用户名字典路径
-    passwordPath: ""													# 密码字典路径
-```
+    user_agent: ""							# 浏览器 UA
+logger_config:								# 日志配置
+    logger_level: "info"					        # 默认日志等级	
+    logger_time_format: 2006/01/02 15:04:05	                        # 日志输出时间格式
+    logger_file_name: ./log/boom.log				        # 日志文件存储路径
+    logger_output_level: []						# 输出到文件中的日志等级
+    logger_file_max_size: 50					        # 日志文件最大体积：单位 MB
+    logger_file_max_backups: 5						# 日志文件最大备份个数：单位 个
+    logger_file_max_age: 30						# 日志文件最大存储时长：单位 天
+    logger_prefix: ""							# 日志前缀
+global_boom_config:							# 全局爆破配置
+    boomConCurrent: 2							# 单个爆破目标的爆破并发数
+    boomModel: 2							# 爆破模式：1.用户名优先--用户名跑字典，密码固定；2.密码优先--密码跑字典，用户名固定
+    boomTarget: ""							# 爆破的目标
+    userNamePath: ""							# 用户名字典路径
+    passwordPath: ""							# 密码字典路径
+``
 
