@@ -12,6 +12,7 @@
 **Boom** 是一款基于无头浏览器的 Web 弱口令爆破工具。它具有以下特性：
 
 - 自动识别网页是否是登录页面
+- 自动识别爆破目标类型：表单/传统认证协议类型(Basic/Digest/NTLM)
 - 自动识别登录相关组件并填充点击
 - 自动判别登录成功与否
 - 支持 URL 批量并发爆破
@@ -60,7 +61,7 @@
 ## 📒 配置文件介绍
 
 ```yaml
-# Version: 0.1
+# Version: 0.2
 
 max_boom_concurrent: 2                                                  # 最大同时爆破的目标个数
 boom_target_path: "" 							# 爆破目标字典路径
@@ -89,6 +90,7 @@ logger_config:								# 日志配置
     logger_prefix: ""							# 日志前缀
 global_boom_config:							# 全局爆破配置
     boomConCurrent: 2							# 单个爆破目标的爆破并发数
+    ClientMaxTimeout: 5                                                 # 客户端最大超时时间
     boomModel: 2							# 爆破模式：1.用户名优先--用户名跑字典，密码固定；2.密码优先--密码跑字典，用户名固定
     boomTarget: ""							# 爆破的目标
     userNamePath: ""							# 用户名字典路径
