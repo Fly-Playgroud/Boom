@@ -57,11 +57,25 @@
     - `--ps`：指定密码字典
 
 
+3. 爆破结果存储
+
+   爆破结果存储有两种格式：
+
+   - `--to` ：--text-ouput 的缩写，以文本格式输出到指定的文件中
+   - `--jo` ：--json-output 的缩写，以 JSON 结构化数据存储到指定 JSON 文件中
+
+   ```bash
+   Boom --ts targets.txt --us users.txt --ps passwords.txt --to ./res.txt
+   ```
+
+   > `--jo` 和 `--to` 是文件 publisher 的快捷方式而已，通过配置文件配置 File Publisher 也是可以的
+
+
 
 ## 📒 配置文件介绍
 
 ```yaml
-# Version: 0.2
+# Version: 0.3
 
 max_boom_concurrent: 2                                                  # 最大同时爆破的目标个数
 boom_target_path: "" 							# 爆破目标字典路径
@@ -90,11 +104,16 @@ logger_config:								# 日志配置
     logger_prefix: ""							# 日志前缀
 global_boom_config:							# 全局爆破配置
     boomConCurrent: 2							# 单个爆破目标的爆破并发数
-    ClientMaxTimeout: 5                                                 # 客户端最大超时时间
+    clientMaxTimeout: 5                                                 # 客户端最大超时时间
     boomModel: 2							# 爆破模式：1.用户名优先--用户名跑字典，密码固定；2.密码优先--密码跑字典，用户名固定
     boomTarget: ""							# 爆破的目标
     userNamePath: ""							# 用户名字典路径
     passwordPath: ""							# 密码字典路径
+publish_config:                                                         # publisher_config/webhook config
+   file:                                                                # 文件 publisher
+      enable: true                                                      # 是否开启文件存储
+      format: text                                                      # 结果存储格式：text/json
+      filePath: ./res.txt                                               # 存储文件路径：.txt/.json
 ```
 
 ## 🏩 学习交流
